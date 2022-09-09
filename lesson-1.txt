@@ -1,0 +1,22 @@
+ubuntu@ubuntu:~$ uname
+Linux
+ubuntu@ubuntu:~$ uname -a
+Linux ubuntu 5.8.0-43-generic #49-20.04.1-Ubuntu SMP Fri Feb 5 09:57:56 UTC 202
+1 x86_64 x86_64 x86_64 GNU/Linux 
+ubuntu@ubuntu:~$ hostnamectl 
+Static hostname: ubuntu
+Icon name: computer-vm 
+Chassis: vm
+Machine ID: f59440cee0fb4f37ale02a688ee9c5df
+Boot ID: f97c995d7e4e4792a5cb4b897aafbd92
+Virtualization: oracle 
+Operating System: Ubuntu 20.04.2 LTS
+Kernel: Linux 5.8.0-43-generic 
+Architecture: X86-64 
+ubuntu@ubuntu:~$ lsb_release -a 
+No LSB modules are available.
+Distributor ID: Ubuntu 
+Description:	Ubuntu 20.04.2 LTS
+Release:	20.04
+Codename:	focal
+ubuntu@ubuntu:~$ 
