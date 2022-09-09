@@ -1,0 +1,136 @@
+victory@victory-VirtualBox:~$ echo 'first line' > fail1
+victory@victory-VirtualBox:~$ cat fail1
+first line
+victory@victory-VirtualBox:~$ ls
+ fail1   Видео   Документы   Загрузки   Изображения   Музыка   Общедоступные  'Рабочий стол'   Шаблоны
+victory@victory-VirtualBox:~$ cat /etc/* 1>etc_files 2>errors
+victory@victory-VirtualBox:~$ ls
+ errors   etc_files   fail1   Видео   Документы   Загрузки   Изображения   Музыка   Общедоступные  'Рабочий стол'   Шаблоны
+victory@victory-VirtualBox:~$ 
+victory@victory-VirtualBox:~$ head errors
+cat: /etc/acpi: Это каталог
+cat: /etc/alsa: Это каталог
+cat: /etc/alternatives: Это каталог
+cat: /etc/apm: Это каталог
+cat: /etc/apparmor: Это каталог
+cat: /etc/apparmor.d: Это каталог
+cat: /etc/apport: Это каталог
+cat: /etc/apt: Это каталог
+cat: /etc/avahi: Это каталог
+cat: /etc/bash_completion.d: Это каталог
+victory@victory-VirtualBox:~$ head etc_files 
+# /etc/adduser.conf: `adduser' configuration.
+# See adduser(8) and adduser.conf(5) for full documentation.
+
+# The DSHELL variable specifies the default login shell on your
+# system.
+DSHELL=/bin/bash
+
+# The DHOME variable specifies the directory containing users' home
+# directories.
+DHOME=/home
+victory@victory-VirtualBox:~$ ll
+итого 488
+drwxrwxr-x 15 victory victory   4096 июл  4 19:28  ./
+drwxr-xr-x  5 root    root      4096 июл  4 18:49  ../
+-rw-rw-r--  1 victory victory   2582 июн 26 22:17  .bash_history
+-rw-rw-r--  1 victory victory    220 июн 24 13:58  .bash_logout
+-rw-rw-r--  1 victory victory   3771 июн 24 13:58  .bashrc
+drwxrwxr-x 11 victory victory   4096 июн 24 15:47  .cache/
+drwxrwxr-x 11 victory victory   4096 июн 24 14:31  .config/
+-rw-rw-r--  1 victory victory   5693 июл  4 19:28  errors
+-rw-rw-r--  1 victory victory 392000 июл  4 19:28  etc_files
+-rw-rw-r--  1 victory victory     11 июл  4 17:10  fail1
+drwxrwxr-x  3 victory victory   4096 июн 24 14:19  .gnupg/
+drwxrwxr-x  3 victory victory   4096 июн 24 14:16  .local/
+-rw-rw-r--  1 victory victory    807 июн 24 13:58  .profile
+drwxrwxr-x  2 victory victory   4096 июн 24 16:04  .ssh/
+-rw-rw-r--  1 victory victory      0 июн 24 14:20  .sudo_as_admin_successful
+-rw-r-----  1 victory victory      5 июл  4 16:44  .vboxclient-clipboard.pid
+-rw-r-----  1 victory victory      5 июл  4 16:44  .vboxclient-display-svga-x11.pid
+-rw-r-----  1 victory victory      5 июл  4 16:44  .vboxclient-draganddrop.pid
+-rw-r-----  1 victory victory      5 июл  4 16:44  .vboxclient-seamless.pid
+drwxrwxr-x  2 victory victory   4096 июн 24 14:17  Видео/
+drwxrwxr-x  2 victory victory   4096 июн 24 14:17  Документы/
+drwxrwxr-x  2 victory victory   4096 июн 24 14:17  Загрузки/
+drwxrwxr-x  2 victory victory   4096 июн 24 14:17  Изображения/
+drwxrwxr-x  2 victory victory   4096 июн 24 14:17  Музыка/
+drwxrwxr-x  2 victory victory   4096 июн 24 14:17  Общедоступные/
+drwxrwxr-x  2 victory victory   4096 июн 24 14:17 'Рабочий стол'/
+drwxrwxr-x  2 victory victory   4096 июн 24 14:17  Шаблоны/
+victory@victory-VirtualBox:~$ ll | cut -b 1-10 | sort | uniq
+drwxrwxr-x
+drwxr-xr-x
+-rw-r-----
+-rw-rw-r--
+итого
+victory@victory-VirtualBox:~$ hostname -I
+192.168.0.31 
+
+___________________________
+
+
+Windows PowerShell
+(C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
+
+Попробуйте новую кроссплатформенную оболочку PowerShell (https://aka.ms/pscore6)
+
+PS C:\WINDOWS\system32> ssh victory@192.168.0.31
+victory@192.168.0.31's password:
+Welcome to Ubuntu 20.04.2 LTS (GNU/Linux 5.8.0-59-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+153 обновления могут быть установлены прямо сейчас.
+0 из этих обновлений, являются обновлениями безопасности.
+Чтобы просмотреть дополнительные обновления выполните: apt list --upgradable
+
+Your Hardware Enablement Stack (HWE) is supported until April 2025.
+Last login: Thu Jun 24 15:47:55 2021 from 192.168.0.60
+Welcome to Ubuntu 20.04.2 LTS (GNU/Linux 5.8.0-59-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+153 обновления могут быть установлены прямо сейчас.
+0 из этих обновлений, являются обновлениями безопасности.
+Чтобы просмотреть дополнительные обновления выполните: apt list --upgradable
+
+Your Hardware Enablement Stack (HWE) is supported until April 2025.
+Last login: Thu Jun 24 15:47:55 2021 from 192.168.0.60
+
+victory@victory-VirtualBox:~$ whoami
+victory
+victory@victory-VirtualBox:~$
+
+_______________
+
+
+victory@victory-VirtualBox:~$ sudo nano /etc/ssh/sshd_config
+[sudo] пароль для victory: 
+victory@victory-VirtualBox:~$ systemctl restart sshd
+victory@victory-VirtualBox:~$ sudo nano /etc/ssh/sshd_config
+victory@victory-VirtualBox:~$ systemctl reload sshd
+victory@victory-VirtualBox:~$ cat > file_name
+1
+2
+3victory@victory-VirtualBox:~$ cat file_name 
+1
+2
+3victory@victory-VirtualBox:~$ mc
+victory@victory-VirtualBox:~$ ps aux | grep mc
+victory     1242  0.0  0.3 175572  7232 ?        Sl   16:44   0:00 /usr/libexec/ibus-memconf
+victory    47022  0.3  0.4  31052  9092 pts/0    S+   20:11   0:00 mc
+victory    47031  0.0  0.0  17696   736 pts/1    S+   20:12   0:00 grep --color=auto mc
+victory@victory-VirtualBox:~$ kill -s 9 47022
+victory@victory-VirtualBox:~$ ps aux | grep mc
+victory     1242  0.0  0.3 175572  7232 ?        Sl   16:44   0:00 /usr/libexec/ibus-memconf
+victory    47037  0.0  0.0  17696   736 pts/1    S+   20:13   0:00 grep --color=auto mc
+victory@victory-VirtualBox:~$ 
+
+
+
+
