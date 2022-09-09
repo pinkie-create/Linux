@@ -1,0 +1,177 @@
+victory@victory-VirtualBox:~$ cat /etc/apt/sources.list | grep -v '^#' | grep -v '^$'
+deb http://ru.archive.ubuntu.com/ubuntu/ focal main restricted
+deb http://ru.archive.ubuntu.com/ubuntu/ focal-updates main restricted
+deb http://ru.archive.ubuntu.com/ubuntu/ focal universe
+deb http://ru.archive.ubuntu.com/ubuntu/ focal-updates universe
+deb http://ru.archive.ubuntu.com/ubuntu/ focal multiverse
+deb http://ru.archive.ubuntu.com/ubuntu/ focal-updates multiverse
+deb http://ru.archive.ubuntu.com/ubuntu/ focal-backports main restricted universe multiverse
+deb http://security.ubuntu.com/ubuntu focal-security main restricted
+deb http://security.ubuntu.com/ubuntu focal-security universe
+deb http://security.ubuntu.com/ubuntu focal-security multiverse
+victory@victory-VirtualBox:~$ sudo apt update
+[sudo] пароль для victory: 
+Пол:1 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]                                      
+Пол:2 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [745 kB]                                                          
+Пол:3 http://security.ubuntu.com/ubuntu focal-security/main i386 Packages [258 kB]                                                           
+Пол:4 http://security.ubuntu.com/ubuntu focal-security/main Translation-en [148 kB]                                                          
+Пол:5 http://security.ubuntu.com/ubuntu focal-security/main amd64 DEP-11 Metadata [24,5 kB]                                                  
+Пол:6 http://security.ubuntu.com/ubuntu focal-security/main amd64 c-n-f Metadata [8 036 B]                                                   
+Пол:7 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [629 kB]                                                      
+Сущ:8 http://ru.archive.ubuntu.com/ubuntu focal InRelease                                                                                    
+Пол:9 http://ru.archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]                                                                   
+Пол:10 http://ru.archive.ubuntu.com/ubuntu focal-backports InRelease [101 kB]                                                                
+Пол:11 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [1 086 kB]                                                      
+Пол:12 http://security.ubuntu.com/ubuntu focal-security/universe i386 Packages [503 kB]                                                      
+Пол:13 http://ru.archive.ubuntu.com/ubuntu focal-updates/main i386 Packages [505 kB]                                                         
+Пол:14 http://ru.archive.ubuntu.com/ubuntu focal-updates/main Translation-en [239 kB]                                                        
+Пол:15 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 DEP-11 Metadata [283 kB]                                                 
+Пол:16 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata [13,8 kB]                                                 
+Пол:17 http://ru.archive.ubuntu.com/ubuntu focal-updates/universe i386 Packages [625 kB]                                                     
+Пол:18 http://ru.archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [841 kB]                                                    
+Пол:19 http://ru.archive.ubuntu.com/ubuntu focal-updates/universe Translation-en [176 kB]                                                    
+Пол:20 http://security.ubuntu.com/ubuntu focal-security/universe Translation-en [96,2 kB]                                                    
+Пол:21 http://ru.archive.ubuntu.com/ubuntu focal-updates/universe amd64 DEP-11 Metadata [333 kB]                                             
+Пол:22 http://ru.archive.ubuntu.com/ubuntu focal-updates/universe DEP-11 48x48 Icons [210 kB]                                                
+Пол:23 http://security.ubuntu.com/ubuntu focal-security/universe amd64 DEP-11 Metadata [60,8 kB]                                             
+Пол:24 http://ru.archive.ubuntu.com/ubuntu focal-updates/universe DEP-11 64x64 Icons [371 kB]                                                
+Пол:25 http://security.ubuntu.com/ubuntu focal-security/universe DEP-11 48x48 Icons [29,9 kB]                                                
+Пол:26 http://security.ubuntu.com/ubuntu focal-security/universe DEP-11 64x64 Icons [51,5 kB]                                                
+Пол:27 http://ru.archive.ubuntu.com/ubuntu focal-updates/universe amd64 c-n-f Metadata [18,3 kB]                                             
+Пол:28 http://security.ubuntu.com/ubuntu focal-security/universe amd64 c-n-f Metadata [11,6 kB]                                              
+Пол:29 http://ru.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 DEP-11 Metadata [2 468 B]                                          
+Пол:30 http://ru.archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [5 792 B]                                                 
+Пол:31 http://ru.archive.ubuntu.com/ubuntu focal-backports/universe i386 Packages [4 724 B]                                                  
+Пол:32 http://ru.archive.ubuntu.com/ubuntu focal-backports/universe amd64 DEP-11 Metadata [10,3 kB]                                          
+Пол:33 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 DEP-11 Metadata [2 464 B]                                           
+Пол:34 http://ru.archive.ubuntu.com/ubuntu focal-backports/universe DEP-11 64x64 Icons [5 606 B]                                             
+Пол:35 http://ru.archive.ubuntu.com/ubuntu focal-backports/universe amd64 c-n-f Metadata [288 B]                                             
+Получено 7 625 kB за 15с (521 kB/s)                                                                                                          
+        
+Чтение списков пакетов… Готово
+Построение дерева зависимостей       
+Чтение информации о состоянии… Готово
+Может быть обновлено 169 пакетов. Запустите «apt list --upgradable» для их показа.
+victory@victory-VirtualBox:~$ sudo apt-add-repository ppa:nginx/stable
+ This PPA contains the latest Stable Release version of the nginx web server software.
+
+**Only Non-End-of-Life Ubuntu Releases are supported in this PPA**
+
+**Development releases of Ubuntu are not officially supported by this PPA, and uploads for those will not be available until actual final releases for those versions**
+ Больше информации: https://launchpad.net/~nginx/+archive/ubuntu/stable
+Нажмите [ENTER] для продолжения или Ctrl-C, чтобы отменить добавление.
+
+Сущ:1 http://ru.archive.ubuntu.com/ubuntu focal InRelease
+Сущ:2 http://ru.archive.ubuntu.com/ubuntu focal-updates InRelease                                                                            
+Сущ:3 http://ru.archive.ubuntu.com/ubuntu focal-backports InRelease                                                                          
+Пол:4 http://ppa.launchpad.net/nginx/stable/ubuntu focal InRelease [17,5 kB]                                                                 
+Сущ:5 http://security.ubuntu.com/ubuntu focal-security InRelease                                           
+Пол:6 http://ppa.launchpad.net/nginx/stable/ubuntu focal/main i386 Packages [1 224 B]
+Пол:7 http://ppa.launchpad.net/nginx/stable/ubuntu focal/main amd64 Packages [4 944 B]
+Пол:8 http://ppa.launchpad.net/nginx/stable/ubuntu focal/main Translation-en [4 572 B]
+Получено 28,3 kB за 2с (11,4 kB/s)                            
+Чтение списков пакетов… Готово
+victory@victory-VirtualBox:~$ sudo apt install nginx
+Чтение списков пакетов… Готово
+Построение дерева зависимостей       
+Чтение информации о состоянии… Готово
+Будут установлены следующие дополнительные пакеты:
+  geoip-database libgeoip1 libnginx-mod-http-image-filter libnginx-mod-http-xslt-filter libnginx-mod-mail libnginx-mod-stream
+  libnginx-mod-stream-geoip nginx-common nginx-core
+Предлагаемые пакеты:
+  geoip-bin fcgiwrap nginx-doc
+Следующие НОВЫЕ пакеты будут установлены:
+  geoip-database libgeoip1 libnginx-mod-http-image-filter libnginx-mod-http-xslt-filter libnginx-mod-mail libnginx-mod-stream
+  libnginx-mod-stream-geoip nginx nginx-common nginx-core
+Обновлено 0 пакетов, установлено 10 новых пакетов, для удаления отмечено 0 пакетов, и 169 пакетов не обновлено.
+Необходимо скачать 3 960 kB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 12,8 MB.
+Хотите продолжить? [Д/н] 
+Пол:1 http://ru.archive.ubuntu.com/ubuntu focal/universe amd64 geoip-database all 20191224-2 [3 029 kB]
+Пол:2 http://ppa.launchpad.net/nginx/stable/ubuntu focal/main amd64 nginx-common all 1.18.0-3ubuntu1+focal2 [68,6 kB]
+Пол:3 http://ppa.launchpad.net/nginx/stable/ubuntu focal/main amd64 libnginx-mod-http-xslt-filter amd64 1.18.0-3ubuntu1+focal2 [43,0 kB]
+Пол:4 http://ppa.launchpad.net/nginx/stable/ubuntu focal/main amd64 libnginx-mod-mail amd64 1.18.0-3ubuntu1+focal2 [72,9 kB]
+Пол:5 http://ppa.launchpad.net/nginx/stable/ubuntu focal/main amd64 libnginx-mod-stream amd64 1.18.0-3ubuntu1+focal2 [97,5 kB]
+Пол:6 http://ru.archive.ubuntu.com/ubuntu focal/universe amd64 libgeoip1 amd64 1.6.12-6build1 [70,5 kB]
+Пол:7 http://ppa.launchpad.net/nginx/stable/ubuntu focal/main amd64 libnginx-mod-stream-geoip amd64 1.18.0-3ubuntu1+focal2 [40,4 kB]
+Пол:8 http://ppa.launchpad.net/nginx/stable/ubuntu focal/main amd64 nginx-core amd64 1.18.0-3ubuntu1+focal2 [457 kB]
+Пол:9 http://ppa.launchpad.net/nginx/stable/ubuntu focal/main amd64 libnginx-mod-http-image-filter amd64 1.18.0-3ubuntu1+focal2 [44,8 kB]
+Пол:10 http://ppa.launchpad.net/nginx/stable/ubuntu focal/main amd64 nginx all 1.18.0-3ubuntu1+focal2 [35,6 kB]
+Получено 3 960 kB за 3с (1 313 kB/s)                          
+Предварительная настройка пакетов …
+Выбор ранее не выбранного пакета geoip-database.
+(Чтение базы данных … на данный момент установлено 195977 файлов и каталогов.)
+Подготовка к распаковке …/0-geoip-database_20191224-2_all.deb …
+Распаковывается geoip-database (20191224-2) …
+Выбор ранее не выбранного пакета libgeoip1:amd64.
+Подготовка к распаковке …/1-libgeoip1_1.6.12-6build1_amd64.deb …
+Распаковывается libgeoip1:amd64 (1.6.12-6build1) …
+Выбор ранее не выбранного пакета nginx-common.
+Подготовка к распаковке …/2-nginx-common_1.18.0-3ubuntu1+focal2_all.deb …
+Распаковывается nginx-common (1.18.0-3ubuntu1+focal2) …
+Выбор ранее не выбранного пакета libnginx-mod-http-xslt-filter.
+Подготовка к распаковке …/3-libnginx-mod-http-xslt-filter_1.18.0-3ubuntu1+focal2_amd64.deb …
+Распаковывается libnginx-mod-http-xslt-filter (1.18.0-3ubuntu1+focal2) …
+Выбор ранее не выбранного пакета libnginx-mod-mail.
+Подготовка к распаковке …/4-libnginx-mod-mail_1.18.0-3ubuntu1+focal2_amd64.deb …
+Распаковывается libnginx-mod-mail (1.18.0-3ubuntu1+focal2) …
+Выбор ранее не выбранного пакета libnginx-mod-stream.
+Подготовка к распаковке …/5-libnginx-mod-stream_1.18.0-3ubuntu1+focal2_amd64.deb …
+Распаковывается libnginx-mod-stream (1.18.0-3ubuntu1+focal2) …
+Выбор ранее не выбранного пакета libnginx-mod-stream-geoip.
+Подготовка к распаковке …/6-libnginx-mod-stream-geoip_1.18.0-3ubuntu1+focal2_amd64.deb …
+Распаковывается libnginx-mod-stream-geoip (1.18.0-3ubuntu1+focal2) …
+Выбор ранее не выбранного пакета nginx-core.
+Подготовка к распаковке …/7-nginx-core_1.18.0-3ubuntu1+focal2_amd64.deb …
+Распаковывается nginx-core (1.18.0-3ubuntu1+focal2) …
+Выбор ранее не выбранного пакета libnginx-mod-http-image-filter.
+Подготовка к распаковке …/8-libnginx-mod-http-image-filter_1.18.0-3ubuntu1+focal2_amd64.deb …
+Распаковывается libnginx-mod-http-image-filter (1.18.0-3ubuntu1+focal2) …
+Выбор ранее не выбранного пакета nginx.
+Подготовка к распаковке …/9-nginx_1.18.0-3ubuntu1+focal2_all.deb …
+Распаковывается nginx (1.18.0-3ubuntu1+focal2) …
+Настраивается пакет nginx-common (1.18.0-3ubuntu1+focal2) …
+Created symlink /etc/systemd/system/multi-user.target.wants/nginx.service → /lib/systemd/system/nginx.service.
+Настраивается пакет libgeoip1:amd64 (1.6.12-6build1) …
+Настраивается пакет geoip-database (20191224-2) …
+Настраивается пакет libnginx-mod-stream (1.18.0-3ubuntu1+focal2) …
+Настраивается пакет nginx-core (1.18.0-3ubuntu1+focal2) …
+ * Upgrading binary nginx                                                                                                              [ OK ] 
+Настраивается пакет libnginx-mod-mail (1.18.0-3ubuntu1+focal2) …
+Настраивается пакет nginx (1.18.0-3ubuntu1+focal2) …
+Настраивается пакет libnginx-mod-http-image-filter (1.18.0-3ubuntu1+focal2) …
+Настраивается пакет libnginx-mod-stream-geoip (1.18.0-3ubuntu1+focal2) …
+Настраивается пакет libnginx-mod-http-xslt-filter (1.18.0-3ubuntu1+focal2) …
+Обрабатываются триггеры для libc-bin (2.31-0ubuntu9.2) …
+Обрабатываются триггеры для ufw (0.36-6) …
+Обрабатываются триггеры для systemd (245.4-4ubuntu3.4) …
+Обрабатываются триггеры для man-db (2.9.1-1) …
+Обрабатываются триггеры для nginx-core (1.18.0-3ubuntu1+focal2) …
+Triggering nginx reload ...
+victory@victory-VirtualBox:~$ sudo dpkg -r nginx
+(Чтение базы данных … на данный момент установлено 196075 файлов и каталогов.)
+Удаляется nginx (1.18.0-3ubuntu1+focal2) …
+victory@victory-VirtualBox:~$ snap list
+Название           Версия              Правка  Канал            Издатель    Примечание
+core18             20210611            2074    latest/stable    canonical✓  base
+gnome-3-34-1804    0+git.3556cb3       72      latest/stable/…  canonical✓  -
+gtk-common-themes  0.1-52-gb92ac40     1515    latest/stable/…  canonical✓  -
+snap-store         3.38.0-64-g23c4c77  547     latest/stable/…  canonical✓  -
+snapd              2.51.1              12398   latest/stable    canonical✓  snapd
+victory@victory-VirtualBox:~$ sudo snap install chromium
+2021-07-15T18:35:23+04:00 INFO Waiting for conflicting change in progress: conflicting plug snap chromium, task "connect"
+2021-07-15T18:35:30+04:00 INFO Waiting for conflicting change in progress: conflicting snap chromium with task "setup-profiles"
+chromium 91.0.4472.114 от Canonical✓ установлен
+victory@victory-VirtualBox:~$ sudo iptables -t filter -A OUTPUT -p tcp --dport 22 -j ACCEPT
+victory@victory-VirtualBox:~$ sudo iptables -t filter -A OUTPUT -p tcp --dport 80 -j ACCEPT
+victory@victory-VirtualBox:~$ sudo iptables -L
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
+ACCEPT     tcp  --  anywhere             anywhere             tcp dpt:ssh
+ACCEPT     tcp  --  anywhere             anywhere             tcp dpt:http
