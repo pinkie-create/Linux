@@ -1,0 +1,267 @@
+victory@victory-VirtualBox:~$ pwd
+/home/victory
+victory@victory-VirtualBox:~$ cd ..
+victory@victory-VirtualBox:/home$ mkdir students
+mkdir: невозможно создать каталог «students»: Отказано в доступе
+victory@victory-VirtualBox:/home$ sudo mkdir students
+[sudo] пароль для victory: 
+victory@victory-VirtualBox:/home$ sudo mkdir mentors
+victory@victory-VirtualBox:/home$ ls
+mentors  students  victory
+victory@victory-VirtualBox:/home$ cd students/
+victory@victory-VirtualBox:/home/students$ touch students_list.txt
+touch: невозможно выполнить touch для 'students_list.txt': Отказано в доступе
+victory@victory-VirtualBox:/home/students$ sudo touch students_list.txt
+victory@victory-VirtualBox:/home/students$ cd ..
+victory@victory-VirtualBox:/home$ cd mentors/
+victory@victory-VirtualBox:/home/mentors$ sudo touch mentors_list.txt
+victory@victory-VirtualBox:/home/mentors$ cd ..
+victory@victory-VirtualBox:/home$ tree
+
+Команда «tree» не найдена, но может быть установлена с помощью:
+
+sudo apt install tree
+
+victory@victory-VirtualBox:/home$ sudo apt install tree
+Чтение списков пакетов… Готово
+Построение дерева зависимостей       
+Чтение информации о состоянии… Готово
+Следующие НОВЫЕ пакеты будут установлены:
+  tree
+Обновлено 0 пакетов, установлено 1 новых пакетов, для удаления отмечено 0 пакетов, и 243 пакетов не обновлено.
+Необходимо скачать 43,0 kB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 115 kB.
+Пол:1 http://ru.archive.ubuntu.com/ubuntu focal/universe amd64 tree amd64 1.8.0-1 [43,0 kB]
+Получено 43,0 kB за 0с (143 kB/s) 
+Выбор ранее не выбранного пакета tree.
+(Чтение базы данных … на данный момент установлено 192679 файлов и каталогов.)
+Подготовка к распаковке …/tree_1.8.0-1_amd64.deb …
+Распаковывается tree (1.8.0-1) …
+Настраивается пакет tree (1.8.0-1) …
+Обрабатываются триггеры для man-db (2.9.1-1) …
+victory@victory-VirtualBox:/home$ tree
+.
+├── mentors
+│   └── mentors_list.txt
+├── students
+│   └── students_list.txt
+└── victory
+    ├── Видео
+    ├── Документы
+    ├── Загрузки
+    ├── Изображения
+    ├── Музыка
+    ├── Общедоступные
+    ├── Рабочий стол
+    └── Шаблоны
+
+11 directories, 2 files
+victory@victory-VirtualBox:/home$ nano students_list.txt
+victory@victory-VirtualBox:/home$ sudo nano students_list.txt
+victory@victory-VirtualBox:/home$ less students_list.txt
+victory@victory-VirtualBox:/home$ sudo nano mentors_list.txt
+victory@victory-VirtualBox:/home$ less mentors_list.txt
+victory@victory-VirtualBox:/home$ mv mentors_list.txt students
+mv: невозможно переместить 'mentors_list.txt' в 'students/mentors_list.txt': Отказано в доступе
+victory@victory-VirtualBox:/home$ sudo mv mentors_list.txt students
+victory@victory-VirtualBox:/home$ sudo rm -r mentors
+victory@victory-VirtualBox:/home$ tree
+.
+├── students
+│   ├── mentors_list.txt
+│   └── students_list.txt
+└── victory
+    ├── Видео
+    ├── Документы
+    ├── Загрузки
+    ├── Изображения
+    ├── Музыка
+    ├── Общедоступные
+    ├── Рабочий стол
+    └── Шаблоны
+
+10 directories, 2 files
+victory@victory-VirtualBox:/home$ sudo mv students students_and_mentors
+victory@victory-VirtualBox:/home$ ls
+students_and_mentors  victory
+victory@victory-VirtualBox:/home$ sudo rm -r students_and_mentors/
+victory@victory-VirtualBox:/home$ tree
+.
+└── victory
+    ├── Видео
+    ├── Документы
+    ├── Загрузки
+    ├── Изображения
+    ├── Музыка
+    ├── Общедоступные
+    ├── Рабочий стол
+    └── Шаблоны
+
+9 directories, 0 files
+
+_______________________________________________________
+
+
+victory@victory-VirtualBox:~$ sudo apt install openssh-server -y
+[sudo] пароль для victory: 
+Чтение списков пакетов… Готово
+Построение дерева зависимостей       
+Чтение информации о состоянии… Готово
+Будут установлены следующие дополнительные пакеты:
+  ncurses-term openssh-client openssh-sftp-server ssh-import-id
+Предлагаемые пакеты:
+  keychain libpam-ssh monkeysphere ssh-askpass molly-guard
+Следующие НОВЫЕ пакеты будут установлены:
+  ncurses-term openssh-server openssh-sftp-server ssh-import-id
+Следующие пакеты будут обновлены:
+  openssh-client
+Обновлено 1 пакетов, установлено 4 новых пакетов, для удаления отмечено 0 пакетов, и 242 пакетов не обновлено.
+Необходимо скачать 688 kB/1 359 kB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 6 010 kB.
+Пол:1 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 ncurses-term all 6.2-0ubuntu2 [249 kB]
+Пол:2 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 openssh-sftp-server amd64 1:8.2p1-4ubuntu0.2 [51,5 kB]
+Пол:3 http://ru.archive.ubuntu.com/ubuntu focal-updates/main amd64 openssh-server amd64 1:8.2p1-4ubuntu0.2 [377 kB]
+Пол:4 http://ru.archive.ubuntu.com/ubuntu focal/main amd64 ssh-import-id all 5.10-0ubuntu1 [10,0 kB]
+Получено 688 kB за 1с (1 297 kB/s)         
+Предварительная настройка пакетов …
+(Чтение базы данных … на данный момент установлено 192686 файлов и каталогов.)
+Подготовка к распаковке …/openssh-client_1%3a8.2p1-4ubuntu0.2_amd64.deb …
+Распаковывается openssh-client (1:8.2p1-4ubuntu0.2) на замену (1:8.2p1-4ubuntu0.
+1) …
+Выбор ранее не выбранного пакета ncurses-term.
+Подготовка к распаковке …/ncurses-term_6.2-0ubuntu2_all.deb …
+Распаковывается ncurses-term (6.2-0ubuntu2) …
+Выбор ранее не выбранного пакета openssh-sftp-server.
+Подготовка к распаковке …/openssh-sftp-server_1%3a8.2p1-4ubuntu0.2_amd64.deb …
+Распаковывается openssh-sftp-server (1:8.2p1-4ubuntu0.2) …
+Выбор ранее не выбранного пакета openssh-server.
+Подготовка к распаковке …/openssh-server_1%3a8.2p1-4ubuntu0.2_amd64.deb …
+Распаковывается openssh-server (1:8.2p1-4ubuntu0.2) …
+Выбор ранее не выбранного пакета ssh-import-id.
+Подготовка к распаковке …/ssh-import-id_5.10-0ubuntu1_all.deb …
+Распаковывается ssh-import-id (5.10-0ubuntu1) …
+Настраивается пакет openssh-client (1:8.2p1-4ubuntu0.2) …
+Настраивается пакет ssh-import-id (5.10-0ubuntu1) …
+Attempting to convert /etc/ssh/ssh_import_id
+Настраивается пакет ncurses-term (6.2-0ubuntu2) …
+Настраивается пакет openssh-sftp-server (1:8.2p1-4ubuntu0.2) …
+Настраивается пакет openssh-server (1:8.2p1-4ubuntu0.2) …
+
+Creating config file /etc/ssh/sshd_config with new version
+Creating SSH2 RSA key; this may take some time ...
+3072 SHA256:aFi44HRqSF4eA/smBKRCvEaqfWtzvUtSeQ76zswhugw root@victory-VirtualBox 
+(RSA)
+Creating SSH2 ECDSA key; this may take some time ...
+256 SHA256:eI/QTBzA1sNOtCHVdLLnvT3zO3HM/T072gzgBeEBf6E root@victory-VirtualBox (
+ECDSA)
+Creating SSH2 ED25519 key; this may take some time ...
+256 SHA256:ICkjNO+EIyzIXJq/232Q1K7hOQ24pCJiV8JcR0vAhEU root@victory-VirtualBox (
+ED25519)
+Created symlink /etc/systemd/system/sshd.service → /lib/systemd/system/ssh.servi
+ce.
+Created symlink /etc/systemd/system/multi-user.target.wants/ssh.service → /lib/s
+ystemd/system/ssh.service.
+rescue-ssh.target is a disabled or a static unit, not starting it.
+Обрабатываются триггеры для systemd (245.4-4ubuntu3.4) …
+Обрабатываются триггеры для man-db (2.9.1-1) …
+Обрабатываются триггеры для ufw (0.36-6) …
+victory@victory-VirtualBox:~$ sudo systemctl enable ssh
+Synchronizing state of ssh.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable ssh
+victory@victory-VirtualBox:~$ sudo systemctl start ssh
+victory@victory-VirtualBox:~$ sudo systemctl status ssh
+● ssh.service - OpenBSD Secure Shell server
+     Loaded: loaded (/lib/systemd/system/ssh.service; enabled; vendor preset: enabled)
+     Active: active (running) since Thu 2021-06-24 15:41:16 +04; 2min 28s ago
+       Docs: man:sshd(8)
+             man:sshd_config(5)
+   Main PID: 3519 (sshd)
+      Tasks: 1 (limit: 2315)
+     Memory: 1.2M
+     CGroup: /system.slice/ssh.service
+             └─3519 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+
+июн 24 15:41:16 victory-VirtualBox systemd[1]: Starting OpenBSD Secure Shell server...
+июн 24 15:41:16 victory-VirtualBox sshd[3519]: Server listening on 0.0.0.0 port 22.
+июн 24 15:41:16 victory-VirtualBox sshd[3519]: Server listening on :: port 22.
+июн 24 15:41:16 victory-VirtualBox systemd[1]: Started OpenBSD Secure Shell server.
+victory@victory-VirtualBox:~$ hostname -I
+192.168.0.31 
+
+__________________________________________
+
+
+Windows PowerShell
+(C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
+
+Попробуйте новую кроссплатформенную оболочку PowerShell (https://aka.ms/pscore6)
+
+PS C:\WINDOWS\system32> ssh victory@192.168.0.31
+The authenticity of host '192.168.0.31 (192.168.0.31)' can't be established.
+ECDSA key fingerprint is SHA256:eI/QTBzA1sNOtCHVdLLnvT3zO3HM/T072gzgBeEBf6E.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '192.168.0.31' (ECDSA) to the list of known hosts.
+victory@192.168.0.31's password:
+Welcome to Ubuntu 20.04.2 LTS (GNU/Linux 5.8.0-59-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+243 обновления могут быть установлены прямо сейчас.
+98 из этих обновлений, являются обновлениями безопасности.
+Чтобы просмотреть дополнительные обновления выполните: apt list --upgradable
+
+Your Hardware Enablement Stack (HWE) is supported until April 2025.
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Welcome to Ubuntu 20.04.2 LTS (GNU/Linux 5.8.0-59-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+243 обновления могут быть установлены прямо сейчас.
+98 из этих обновлений, являются обновлениями безопасности.
+Чтобы просмотреть дополнительные обновления выполните: apt list --upgradable
+
+Your Hardware Enablement Stack (HWE) is supported until April 2025.
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+victory@victory-VirtualBox:~$ pwd
+/home/victory
+victory@victory-VirtualBox:~$
+
+___________________________________
+
+
+victory@victory-VirtualBox:~$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/victory/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/victory/.ssh/id_rsa
+Your public key has been saved in /home/victory/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:SQt6HSkBFWV2HIgHIQhomGrcfVPky1mKY0TAwA7eUFE victory@victory-VirtualBox
+The key's randomart image is:
++---[RSA 3072]----+
+|+oo=BEBB=+o.     |
+|++.. oo+++.      |
+|= * . oo=. .     |
+|.+ + o.Bo+=      |
+|.   . o+S=       |
+|     .. .        |
+|                 |
+|                 |
+|                 |
++----[SHA256]-----+
